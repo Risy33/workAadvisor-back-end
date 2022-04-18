@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      user.hasMany(models.experience, { foreignKey: "userId" });
     }
   }
   user.init(
@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      isAdmin: DataTypes.BOOLEAN,
     },
     {
       sequelize,
