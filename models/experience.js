@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       experience.belongsTo(models.user, { foreignKey: "userId" });
-      experience.hasOne(models.workPlace, { foreignKey: "workPlaceId" });
+      experience.belongsTo(models.workPlace, { foreignKey: "workPlaceId" });
     }
   }
   experience.init(
@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       rating: { type: DataTypes.STRING, allowNull: false },
       useful: DataTypes.INTEGER,
       status: DataTypes.STRING,
+      image: DataTypes.STRING,
     },
     {
       sequelize,

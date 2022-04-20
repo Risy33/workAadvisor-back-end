@@ -1,14 +1,15 @@
 const { Router } = require("express");
 const User = require("../models/").user;
 const Experiences = require("../models").experience;
-const WorkPlace = require("../models").workplace;
+const WorkPlaces = require("../models").workPlace;
 const router = new Router();
+
 
 router.get("/", async (req, res, next) => {
   try {
-    const experiences = await Experiences.findAll({ include: WorkPlace });
+    const experiences = await Experiences.findAll({ include: WorkPlaces });
     if (!experiences || experiences === 0) {
-      return res.status(404).send({ message: "exprience not found" });
+      return res.status(404).send({ message: "experience not found" });
     }
     res.status(200).send({
       experiences,
