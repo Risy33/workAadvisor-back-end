@@ -21,7 +21,7 @@ router.post("/login", async (req, res, next) => {
 
     if (!user || !bcrypt.compareSync(password, user.password)) {
       return res.status(400).send({
-        message: "User with that email not found or password incorrect"
+        message: "User with that email not found or password incorrect",
       });
     }
 
@@ -35,8 +35,8 @@ router.post("/login", async (req, res, next) => {
 });
 
 router.post("/signup", async (req, res) => {
-  const { email, password, name } = req.body;
-  if (!email || !password || !name) {
+  const { email, password, name, isAdmin } = req.body;
+  if (!email || !password || !name || !isAdmin) {
     return res.status(400).send("Please provide an email, password and a name");
   }
 
@@ -44,7 +44,8 @@ router.post("/signup", async (req, res) => {
     const newUser = await User.create({
       email,
       password: bcrypt.hashSync(password, SALT_ROUNDS),
-      name
+      name,
+      isAdmin,
     });
 
     delete newUser.dataValues["password"]; // don't send back the password hash
@@ -58,8 +59,8 @@ router.post("/signup", async (req, res) => {
         .status(400)
         .send({ message: "There is an existing account with this email" });
     }
-
-    return res.status(400).send({ message: "Something went wrong, sorry" });
+    console.log("error.message", error.message);
+    return res.status(500).send({ message: "Something went wrong, sorry" });
   }
 });
 
