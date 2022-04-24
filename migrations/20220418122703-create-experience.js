@@ -17,11 +17,7 @@ module.exports = {
       },
       description: {
         allowNull: false,
-        type: Sequelize.STRING,
-      },
-      rating: {
-        allowNull: false,
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(1000),
       },
       useful: {
         type: Sequelize.INTEGER,

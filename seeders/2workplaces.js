@@ -12,6 +12,7 @@ module.exports = {
           longitude: " 4.8895560133541895",
           image:
             "https://media-cdn.tripadvisor.com/media/photo-m/1280/18/e8/db/db/the-lovely-pool-terrace.jpg",
+          rating: 33,
           type: "Membership Club/Hotel",
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -23,6 +24,7 @@ module.exports = {
           longitude: "4.902428361645944",
           image:
             "https://lingotto.nl/wp-content/uploads/2020/07/Lingotto-ADAM-Toren-4.jpg",
+          rating: 57,
           type: "Sky bar/restaurant",
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -34,6 +36,7 @@ module.exports = {
           longitude: "4.8720605984095045",
           image:
             "http://www.magtheweekly.com/assets/uploads/updates/2021-11-10/0_3_015533_album.jpg",
+          rating: 44,
           type: "Hotel",
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -45,6 +48,7 @@ module.exports = {
           longitude: "4.883713340578554",
           image:
             "https://se-prod.onemeeting.com/assets/photos/1249/600/nl-NL/the-college-hotel-the-college-hotel-amsterdam-21647.jpg",
+          rating: 3,
           type: "Hotel/restaurant/bar",
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -57,6 +61,7 @@ module.exports = {
           image:
             "https://media-cdn.tripadvisor.com/media/photo-s/17/e5/27/13/segugio-upstairs.jpg",
           type: " Italian Restaurant",
+          rating: 20,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -68,6 +73,7 @@ module.exports = {
           image:
             "https://hospitality-on.com/sites/default/files/import/contenu/pulitzermsterdam_opt.jpg",
           type: "Luxury Hotel",
+          rating: 30,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -78,6 +84,7 @@ module.exports = {
           longitude: "4.8979784073960335",
           image:
             "https://www.amsterdam-travel-guide.net/images/hotels/park-plaza-victoria-hotel-amsterdam-netherlands.jpg",
+          rating: 10,
           type: "Hotel,restaurant,bar",
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -89,6 +96,7 @@ module.exports = {
           longitude: "4.901283457776897",
           image:
             "https://media-cdn.tripadvisor.com/media/photo-s/11/0a/01/2e/exterior.jpg",
+          rating: 9,
           type: "Irish Pub",
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -100,6 +108,7 @@ module.exports = {
           longitude: "4.896297128942493",
           image:
             "https://pbs.twimg.com/media/EITpg_8WsAAxXh_?format=jpg&name=4096x4096",
+          rating: 3,
           type: "Coffe",
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -111,6 +120,7 @@ module.exports = {
           longitude: "4.894108446334207",
           image:
             "https://assets.anantara.com/image/upload/q_auto,f_auto/media/minor/anantara/images/grand-hotel-krasnapolsky-amsterdam/anantara_grand_hotel_krasnapolsky_amsterdam_944x510.jpg",
+          rating: 7,
           type: "Hotel/restaurant/bar",
           createdAt: new Date(),
           updatedAt: new Date(),

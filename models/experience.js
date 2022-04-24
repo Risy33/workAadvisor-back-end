@@ -15,8 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   experience.init(
     {
       title: { type: DataTypes.STRING, allowNull: false },
-      description: { type: DataTypes.STRING, allowNull: false },
-      rating: { type: DataTypes.STRING, allowNull: false },
+      description: { type: DataTypes.STRING(1000), allowNull: false },
       useful: DataTypes.INTEGER,
       status: DataTypes.STRING,
       image: DataTypes.STRING,

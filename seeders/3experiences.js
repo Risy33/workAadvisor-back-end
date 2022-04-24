@@ -6,12 +6,12 @@ module.exports = {
       "experiences",
       [
         {
-          title: "Title",
+          title: "Dream Place",
           description:
-            "'m not the best at expressing my feelings, but... I hope you can love me the way I love you.",
-          rating: 3,
+            "A perfect place to work if you are looking for a small Restaurant and with only few tables. Situated in the heart of Amsterdam this place gets a lot of internationals guest and a lot of dutch people,good if you want to practice the language. The Owner of the place is 100% proud Italian and he also is a sommelier,perfect if you are willing to learn the italian wine world. The restaurant is small but it can get very very busy in a short amount of time so to work there you will need to manage the pressure if you are a chef or a waiter.",
+
           useful: 1,
-          status: "positive",
+          status: "Checked",
           image:
             "https://media.istockphoto.com/photos/modern-restaurant-interior-design-picture-id1211547141?k=20&m=1211547141&s=612x612&w=0&h=KiZX3NBZVCK4MlSh4BJ8hZNSJcTIMbNSSV2yusw2NmM=",
           createdAt: new Date(),
@@ -20,10 +20,10 @@ module.exports = {
           userId: 2,
         },
         {
-          title: "Title number 2",
+          title: "Just wonderful!",
           description:
-            "Zoe is a teenage girl convicted of a murder she didn't commit, but that doesn't matter in the Arena of Justice. You either win your fights, or you die. ...",
-          rating: 2,
+            "The management of this place is amazing! From the Front Office,House Cleaaning, to the Food & Beverage,eveybody is very friendly and willing to help you in case you don't know something. Can get very busy but the atmosphere stays relaxed.",
+
           useful: 0,
           status: "positive",
           image:
@@ -34,10 +34,10 @@ module.exports = {
           userId: 1,
         },
         {
-          title: "Title number 3",
+          title: "Perfect place to start your carrear!",
           description:
-            "You remind me of the ocean..'' ''Is it because I'm deep and mysterious?'' he asks. ''No, because you're salty and scare the shit out of people'",
-          rating: 2,
+            "I remember when I first start in this place I did not know anything about waitering,I had to start from the basic and I ended up to be know everything I could learn about service,wines,hospitality,food etc. This all thank to the beutiful people who work there!",
+
           useful: 0,
           status: "positive",
           image:
@@ -48,10 +48,10 @@ module.exports = {
           userId: 2,
         },
         {
-          title: "Title number 4",
+          title: "Summer in the terrace",
           description:
-            "Highest rank on Wattpad: #7 in Quaterbacks #1 in goodgirl #4 in highschoolromance #9 in romance #1 in romcom Everly Gray, a seventeen years old teenager whose life is...",
-          rating: 2,
+            "I spent the all summer working on the beutiful terrace of this hotel,Crazy!! the guests demand too much from a very small amout of staff but at the end of the day every month the tips were so good( almost another salary).",
+
           useful: 5,
           status: "positive",
           image:
@@ -62,10 +62,10 @@ module.exports = {
           userId: 1,
         },
         {
-          title: "Title number 5",
+          title: "Nice but not perfect",
           description:
-            "Miriam Abby Priya Mei Tyler Devon tae young Robaire is added now! So is Jesse lmao that's all I'm doing so far and no smut cause they are PRETEENS in a DISNEY MOVIE than...",
-          rating: 5,
+            "This place is one the busiest place I ever worked for! To work here you need to handle with any type of tourist so can be nice but can also be horrible...We were running a lot because of the lack of staff but at the end of the night the tips are so good that you forget about the craziness of the past 10 hours.",
+
           useful: 8,
           status: "positive",
           image:

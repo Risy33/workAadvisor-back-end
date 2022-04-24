@@ -16,4 +16,20 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+router.get("/details/:id", async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const workplacesId = await WorkPlace.findByPk(id, {
+      include: [Experiences],
+    });
+    if (!workplacesId || workplacesId.length === 0) {
+      return res.status(404).send({ message: "workPlace not found" });
+    }
+    res.status(200).send(workplacesId);
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
+
 module.exports = router;
