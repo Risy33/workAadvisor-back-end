@@ -20,7 +20,7 @@ router.get("/details/:id", async (req, res, next) => {
   try {
     const id = req.params.id;
     const workplacesId = await WorkPlace.findByPk(id, {
-      include: [Experiences],
+      include: { model: Experiences, order: [["createdAt", "DESC"]] },
     });
     if (!workplacesId || workplacesId.length === 0) {
       return res.status(404).send({ message: "workPlace not found" });

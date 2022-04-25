@@ -3,10 +3,14 @@ const User = require("../models/").user;
 const Experiences = require("../models").experience;
 const WorkPlaces = require("../models").workPlace;
 const router = new Router();
+const authMiddleware = require("../auth/middleware");
 
 router.get("/", async (req, res, next) => {
   try {
-    const experiences = await Experiences.findAll({ include: WorkPlaces });
+    const experiences = await Experiences.findAll({
+      include: WorkPlaces,
+      order: [["createdAt", "DESC"]],
+    });
     if (!experiences || experiences === 0) {
       return res.status(404).send({ message: "experience not found" });
     }
@@ -31,4 +35,28 @@ router.patch("/:id", async (req, res, next) => {
     next(e);
   }
 });
+
+router.post("/newExperience", authMiddleware, async (req, res, next) => {
+  try {
+    const { title, description, image, workPlaceId, useful, status } = req.body;
+    const userId = req.user.id;
+
+    const newExperience = await Experiences.create({
+      title,
+      description,
+      image,
+      status,
+      userId: userId,
+      workPlaceId,
+      useful,
+    });
+
+    console.log(newExperience);
+
+    res.send(newExperience);
+  } catch (error) {
+    console.log(error.message);
+  }
+});
+
 module.exports = router;
