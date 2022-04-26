@@ -32,4 +32,5 @@ router.get("/details/:id", async (req, res, next) => {
   }
 });
 
+
 module.exports = router;

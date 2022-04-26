@@ -1,5 +1,4 @@
 const { Router } = require("express");
-const User = require("../models/").user;
 const Experiences = require("../models").experience;
 const WorkPlaces = require("../models").workPlace;
 const router = new Router();
@@ -39,14 +38,14 @@ router.patch("/:id", async (req, res, next) => {
 router.post("/newExperience", authMiddleware, async (req, res, next) => {
   try {
     const { title, description, image, workPlaceId, useful, status } = req.body;
-    const userId = req.user.id;
+    const { id } = req.user;
 
     const newExperience = await Experiences.create({
       title,
       description,
       image,
       status,
-      userId: userId,
+      userId: id,
       workPlaceId,
       useful,
     });
@@ -56,6 +55,29 @@ router.post("/newExperience", authMiddleware, async (req, res, next) => {
     res.send(newExperience);
   } catch (error) {
     console.log(error.message);
+  }
+});
+
+router.delete("/:id", authMiddleware, async (req, res, next) => {
+  try {
+    const { id } = req.params;
+
+    const experience = await Experiences.findByPk(id);
+
+    console.log("experience", experience);
+
+    if (!experience) {
+      return res.status(404).send("Experience not found");
+    }
+    if (experience.userId !== req.user.id)
+      return res
+        .status(401)
+        .send("user is not authorized to delete this experience");
+
+    const deleted = await Experiences.destroy({ where: { id } });
+    res.status(202).send({ message: JSON.stringify(deleted) });
+  } catch (e) {
+    next(e);
   }
 });
 

@@ -11,7 +11,7 @@ module.exports = {
           latitude: "52.371943656589714",
           longitude: " 4.8895560133541895",
           image:
-            "https://media-cdn.tripadvisor.com/media/photo-m/1280/18/e8/db/db/the-lovely-pool-terrace.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8L6FhccsHY8tQFF8W-lR-cg7mvyLDqGShbA&usqp=CAU",
           rating: 33,
           type: "Membership Club/Hotel",
           createdAt: new Date(),
