@@ -5,10 +5,13 @@ const authMiddleWare = require("./auth/middleware");
 const authRouter = require("./routers/auth");
 const experienceRouter = require("./routers/experiences");
 const workplaceRouter = require("./routers/workplaces");
-const { PORT } = require("./config/constants");
+// const { PORT } = require("./config/constants");
+const PORT = process.env.PORT || 4000;
+const cors = require("cors");
 
 // Create an express app
 const app = express();
+app.use(cors());
 
 /**
  * Middlewares
