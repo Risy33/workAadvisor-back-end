@@ -58,6 +58,27 @@ router.post("/newExperience", authMiddleware, async (req, res, next) => {
   }
 });
 
+router.patch("/edit/:id", authMiddleware, async (req, res, next) => {
+  try {
+    // const { id } = req.params;
+    const { title, description, image } = req.body;
+    const expereinceToUpdate = await Experiences.findByPk(req.params.id);
+
+    if (!expereinceToUpdate) {
+      res.status(404).send("Experience not found");
+    } else {
+      await expereinceToUpdate.update({
+        title,
+        description,
+        image,
+      });
+      return res.status(200).send(expereinceToUpdate);
+    }
+  } catch (e) {
+    next(e);
+  }
+});
+
 router.delete("/:id", authMiddleware, async (req, res, next) => {
   try {
     const { id } = req.params;
